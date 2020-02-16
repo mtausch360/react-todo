@@ -1,0 +1,33 @@
+{
+  "name": "react-todo",
+  "version": "1.0.0",
+  "description": "my own react redux mvc ",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --client-log-level debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tausch86/react-todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tausch86/react-todo/issues"
+  },
+  "homepage": "https://github.com/tausch86/react-todo#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
