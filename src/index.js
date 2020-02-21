@@ -1,20 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import rootReducer from './reducers'
+import App from './components/App'
+import logger from 'redux-logger';
 
-import ReactDOM from 'react-dom';
-
-console.log("app run")
-class App extends Component {
-  render () {
-    console.log("RUN")
-    return (
-      <div>
-        Hello World
-      </div>
-    );
-  }
-};
-
-ReactDOM.render(
-  <App />,
+const store = createStore(
+  rootReducer,
+  applyMiddleware(logger)
+ )
+console.log('store', store.getState())
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.querySelector('#app')
 );

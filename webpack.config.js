@@ -8,8 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: './dist',
-    inline: true
+    contentBase: './dist'
   },
   module: {
     rules: [
@@ -25,6 +24,10 @@ module.exports = {
             ]
           }
         }
+      },
+      {
+        test: /\.less/,
+        loader: "less-loader"
       }
     ]
   }
