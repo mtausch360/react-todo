@@ -1,6 +1,7 @@
 import { VisibilityFilters } from '../actions'
 
 const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
+  console.log('action', action)
   switch (action.type) {
 
     case "SET_VISIBILITY_FILTER":
